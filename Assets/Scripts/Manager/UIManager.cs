@@ -2,6 +2,8 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 // ReSharper disable All
 #pragma warning disable CS0169
 
@@ -9,6 +11,8 @@ namespace Manager
 {
     public class UIManager : MonoBehaviour
     {
+        [SerializeField] private GameObject m_miningBarOnject;
+        [SerializeField] private Image m_miningBarFill;
         private static UIManager m_instance;
         public static UIManager Instance
         {
@@ -36,6 +40,17 @@ namespace Manager
             }
         }
 
+        public void SetMiningBar(float currentTime, float maxTime)
+        {
+            if (currentTime >0 && currentTime < maxTime)
+            {
+                m_miningBarOnject.SetActive(true);
+                m_miningBarFill.fillAmount = currentTime / maxTime;
+            } else if (currentTime < 0 || currentTime > maxTime) 
+            {
+                m_miningBarOnject.SetActive(false);
+            }
+        }
         public void OpenInventory()
         {
             //!m_inventory.gameObject.activeSelf false
