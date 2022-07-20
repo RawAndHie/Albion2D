@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: Leather
   m_EditorClassIdentifier: 
   type: 4
-  imageItem: {fileID: 4971893330376090912, guid: ec97d4604eb827c4fb05f9b323fd1241, type: 3}
+  imageItem: {fileID: -1075854790282143660, guid: 4cdc85a76cd119c4980a660ca3495bea, type: 3}
   price: 100
   fameValue: 5
   maxStackSize: 999
   itemValue: 1
-  level: 1
+  level: 0
   tier: 1
+  timeMining: 6

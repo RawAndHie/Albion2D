@@ -33,16 +33,6 @@ namespace SaveData.SO
             tier = t;
             level = l;
         }
-
-        private void SetTimeMining()
-        {
-            if (level >= 1 && level <= 100)
-            {
-                timeMining = 5;
-            } else if (level >= 101 && level <200)
-            {
-                timeMining = 6;
-            }
-        }
+        
     }
 }

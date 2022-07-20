@@ -26,7 +26,6 @@ namespace Player
             float horizontalMove = Input.GetAxis("Horizontal");
             float verticalMove = Input.GetAxis("Vertical");
             m_moveDelta = new Vector3(horizontalMove, verticalMove, 0);
-
             if (Application.platform == RuntimePlatform.WindowsEditor ||
                 Application.platform == RuntimePlatform.WindowsPlayer)
             {

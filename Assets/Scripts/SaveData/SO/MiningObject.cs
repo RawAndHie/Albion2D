@@ -5,10 +5,10 @@ using UnityEngine;
 
 namespace SaveData.SO
 {
+    [CreateAssetMenu(fileName = "Mine Object", menuName = "Mine Object")]
     public class MiningObject : ScriptableObject
     {
         public string name;
         public int totalItem;
-        
     }
 }

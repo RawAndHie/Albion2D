@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using SaveData.SO;
 using UnityEngine;
 
 // ReSharper disable All
@@ -27,6 +28,35 @@ namespace SaveData
         public int levelAxe;
         public int levelKnife;
         public int levelSickle;
+
+        //set
+        public void SetFame(ItemGatherType type, int fameValue)
+        {
+            switch (type)
+            {
+                case ItemGatherType.Metal:
+                    famePickaxe += fameValue;
+                    break;
+                case  ItemGatherType.Stone:
+                    fameHammer += fameValue;
+                    break;
+                case ItemGatherType.Wood:
+                    fameAxe += fameValue;
+                    break;
+                case ItemGatherType.Leather:
+                    fameKnife += fameValue;
+                    break;
+                case ItemGatherType.Cloth:
+                    fameSickle += fameValue;
+                    break;
+            }
+        }
+        //get
+        public string GetFameValue()
+        {
+            return "famePickaxe : " + famePickaxe + "\nfameHammer : " + fameHammer +
+                   "\nfameAxe : " + fameAxe + "\nfameKnife : " + fameKnife + "\nfameSickle : " + fameSickle;
+        }
     }
 
     public static class ToolData
@@ -59,6 +89,18 @@ namespace SaveData
         {
             var data = JsonUtility.ToJson(m_toolModel);
             PlayerPrefs.SetString(TOOL_DATA, data);
+        }
+        
+        // set
+        public static void SetFame(ItemGatherType type, int fameValue)
+        {
+            m_toolModel.SetFame(type, fameValue);
+            SaveData();
+        }
+        //get
+        public static string GetFame()
+        {
+            return m_toolModel.GetFameValue();
         }
     }
 }

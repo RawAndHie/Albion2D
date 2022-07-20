@@ -12,6 +12,7 @@ namespace SaveData
     public class InventoryModel
     {
         public List<ItemGather> itemGathers;
+        public List<MiningTool> MiningTools;
         public int itemMetal;
         public int itemStone;
         public int itemWood;
@@ -142,6 +143,7 @@ namespace SaveData
                 m_inventoryModel = new InventoryModel
                 {
                     itemGathers = new List<ItemGather>(),
+                    MiningTools = new List<MiningTool>(),
                     itemMetal = 0,
                     itemStone = 0,
                     itemWood = 0,
