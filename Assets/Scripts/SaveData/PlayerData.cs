@@ -15,11 +15,7 @@ namespace SaveData
         // public float growthDamage;
         public int fameWeapon;
         public int fameAmor;
-        public int famePickaxe; // weapon metal
-        public int fameHammer; // weapon stone
-        public int fameAxe; // weapon wood
-        public int fameKnife; // weapon skinner
-        public int fameSickle; // weapon colth
+        
     }
 
     public static class PlayerData
@@ -34,13 +30,8 @@ namespace SaveData
             {
                 m_playerModel = new PlayerModel
                 {
-                    fameWeapon = 0,
                     fameAmor = 0,
-                    famePickaxe = 0,
-                    fameHammer = 0,
-                    fameAxe = 0,
-                    fameKnife = 0,
-                    fameSickle = 0
+                    fameWeapon = 0
                 };
             }
         }

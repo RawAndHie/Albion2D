@@ -38,7 +38,6 @@ namespace Player
         {
             if (col.gameObject.CompareTag("Mining Object"))
             {
-                Debug.Log("va cham");
                 GatherItemController gatherItemController;
                 col.gameObject.TryGetComponent(out gatherItemController);
                 BagData.AddItem(gatherItemController.GetItemGather(), Random.Range(1,5));

@@ -21,19 +21,12 @@ namespace SaveData
         //set 
         public void AddItem(ItemGather itemGather, int quantity)
         {
-            Debug.Log("day la model");
-            Debug.Log("count " + itemGathers.Count);
             var hasItem = false;
             // check item trong inventory
-            foreach (var item in itemGathers)
-            {
-                
-            }
             if (itemGathers.Count != 0)
             {
                 for (int i = 0; i < itemGathers.Count; i++)
                 {
-                    Debug.Log("chay vong for");
                     // kiểm tra loại item type = nhau tức đã có => + quantity
                     if (itemGathers[i].type == itemGather.type)
                     {
@@ -44,7 +37,6 @@ namespace SaveData
 
                 if (hasItem == true)
                 {
-                    Debug.Log("đã có");
                     switch (itemGather.type)
                     {
                         case ItemGatherType.Metal:
@@ -66,7 +58,6 @@ namespace SaveData
                 }
                 else
                 {
-                    Debug.Log("add new");
                     itemGathers.Add(itemGather);
                     switch (itemGather.type)
                     {
@@ -90,7 +81,6 @@ namespace SaveData
             }
             else
             {
-                Debug.Log("add lan dau");
                 itemGathers.Add(itemGather);
                 switch (itemGather.type)
                 {
@@ -170,7 +160,6 @@ namespace SaveData
         //set
         public static void AddItem(ItemGather itemGather, int quantity)
         {
-            Debug.Log("goi sang inventory model");
             m_inventoryModel.AddItem(itemGather, quantity);
             SaveData();
         }

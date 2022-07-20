@@ -18,8 +18,6 @@ namespace UI
 
         public void UpdateInventory()
         {
-            Debug.Log("đã chọc vào data");
-            Debug.Log("đếm : "+ BagData.GetAllInventory().itemGathers.Count);
             for (int i = 0; i < BagData.GetAllInventory().itemGathers.Count; i++)
             {
                 // tạm thay đổi active của slot
