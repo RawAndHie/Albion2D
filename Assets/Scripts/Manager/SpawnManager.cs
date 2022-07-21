@@ -6,6 +6,7 @@ using GatherItem;
 using Player;
 using SaveData;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 // ReSharper disable All
 #pragma warning disable CS0169
@@ -165,6 +166,11 @@ namespace Manager
             else if (m_instance != this)
             {
                 Destroy(gameObject);
+            }
+
+            for (int i = 0; i < 20; i++)
+            {
+                SpawnMob(new Vector3(Random.Range(3f, -3f), Random.Range(3f, -3f)));
             }
         }
         

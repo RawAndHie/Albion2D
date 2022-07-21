@@ -19,7 +19,8 @@ namespace SaveData
         {
             // tính toắn health theo tier hiện tại
             float health =  baseHp + growthHp*(level-1) + 
-                           (1/(130 * (float)Math.Pow(level, 1))) * (float)Math.Pow(level-1, 3) + 
+                           (1/(130 * (float)Math.Pow(level, 1))) * 
+                           (float)Math.Pow(level-1, 3) + 
                            (float)Math.Pow(level-1, 1.6f) ;
             return health;
         }

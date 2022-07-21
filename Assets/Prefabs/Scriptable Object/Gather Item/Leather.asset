@@ -15,7 +15,7 @@ MonoBehaviour:
   type: 4
   imageItem: {fileID: -1075854790282143660, guid: 4cdc85a76cd119c4980a660ca3495bea, type: 3}
   price: 100
-  fameValue: 5
+  fameValue: 50
   maxStackSize: 999
   itemValue: 1
   level: 0

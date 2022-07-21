@@ -143,6 +143,7 @@ namespace Player
 
             BagData.AddItem(m_itemGather.GetItemGather(), Random.Range(1, 5));
             ToolData.SetFame(m_itemGather.GetItemGather().type, m_itemGather.GetItemGather().fameValue);
+            Debug.Log(ToolData.GetLevel());
             SetPlayerState(PlayerState.Idle);
         }
 
